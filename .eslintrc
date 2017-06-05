@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb",
+  "ecmaFeatures": {
+    "classes": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "react/jsx-filename-extension": ["off"]
+  }
+}
