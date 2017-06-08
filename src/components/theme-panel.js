@@ -25,7 +25,6 @@ class ThemePanel extends React.Component {
 
   render() {
     const { currentTheme, themes } = this.props;
-    const currentThemeStyles = themes.filter(({ name }) => name === currentTheme)[0].styles;
 
     return (
       <div style={styles.panel} >
@@ -33,22 +32,25 @@ class ThemePanel extends React.Component {
           <select
             onChange={this.handleChange}
             style={styles.select}
+            value={currentTheme}
           >
             {
-              themes.map(theme => (
+              Object.keys(themes).map(theme => (
                 <option
-                  key={theme.name}
-                  value={theme.name}
-                  selected={theme.name === currentTheme}
+                  key={theme}
+                  value={theme}
                 >
-                  {theme.name}
+                  {theme}
                 </option>
               ))
             }
           </select>
         </div>
         <div style={styles.rightColumn}>
-          {ThemePanel.renderThemeStyles(currentThemeStyles)}
+          {
+            themes[currentTheme] &&
+              ThemePanel.renderThemeStyles(themes[currentTheme])
+          }
         </div>
       </div>
     );
@@ -56,12 +58,16 @@ class ThemePanel extends React.Component {
 }
 
 ThemePanel.propTypes = {
-  onThemeChange: PropTypes.func.isRequired,
-  themes: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired
-  })).isRequired,
-  currentTheme: PropTypes.string.isRequired
+  onThemeChange: PropTypes.func,
+// eslint-disable-next-line react/forbid-prop-types
+  themes: PropTypes.object,
+  currentTheme: PropTypes.string
+};
+
+ThemePanel.defaultProps = {
+  onThemeChange: () => {},
+  themes: {},
+  currentTheme: ''
 };
 
 export default ThemePanel;

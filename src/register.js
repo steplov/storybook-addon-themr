@@ -1,12 +1,12 @@
 import React from 'react';
-import addons from '@storybook/addons';
+import { register, getChannel, addPanel } from '@storybook/addons';
 import PanelContainer from './containers/panel-container';
-import { ADDON_ID, PANEL_ID } from './';
+import { ADDON_ID, PANEL_ID } from './index';
 
-addons.register(ADDON_ID, (api) => {
-  const channel = addons.getChannel();
+register(ADDON_ID, (api) => {
+  const channel = getChannel();
 
-  addons.addPanel(PANEL_ID, {
+  addPanel(PANEL_ID, {
     title: 'React CSS Themr',
     render: () => <PanelContainer channel={channel} api={api} />
   });

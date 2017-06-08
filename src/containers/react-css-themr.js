@@ -9,17 +9,15 @@ class ReactCSSThemr extends React.Component {
 
     this.onReceiveData = this.onReceiveData.bind(this);
     this.state = {
-      currentTheme: props.themes[0].name,
+      currentTheme: Object.keys(props.themes)[0],
       isReady: false
     };
-  }
 
-  componentDidMount() {
+    this.props.channel.on(EVENT_ID_DATA, this.onReceiveData);
     this.props.channel.emit(EVENT_ID_INIT, {
       themes: this.props.themes,
       currentTheme: this.state.currentTheme
     });
-    this.props.channel.on(EVENT_ID_DATA, this.onReceiveData);
   }
 
   componentWillUnmount() {
@@ -33,20 +31,15 @@ class ReactCSSThemr extends React.Component {
     });
   }
 
-  getTheme(theme) {
-    return this.props.themes.filter(({ name: n }) => n === theme)[0];
-  }
-
   render() {
-    const { story } = this.props;
+    const { story, themes } = this.props;
     const { currentTheme, isReady } = this.state;
-    const { name, styles } = this.getTheme(currentTheme);
 
     return (
       isReady ?
         <ThemeProvider
-          key={name}
-          theme={styles}
+          key={currentTheme}
+          theme={themes[currentTheme]}
         >
           {story}
         </ThemeProvider> :
@@ -56,10 +49,8 @@ class ReactCSSThemr extends React.Component {
 }
 
 ReactCSSThemr.propTypes = {
-  themes: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired
-  })).isRequired,
+// eslint-disable-next-line react/forbid-prop-types
+  themes: PropTypes.object.isRequired,
   channel: PropTypes.shape({
     on: PropTypes.func.isRequired,
     removeListener: PropTypes.func.isRequired,

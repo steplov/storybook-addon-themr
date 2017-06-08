@@ -4,21 +4,18 @@ import { EVENT_ID_INIT, EVENT_ID_DATA } from '../';
 import ThemePanel from '../components/theme-panel';
 
 class PanelContainer extends React.Component {
-  constructor(props, ...args) {
-    super(props, ...args);
+  constructor(props) {
+    super(props);
 
     this.onInitChannel = this.onInitChannel.bind(this);
     this.onChangeTheme = this.onChangeTheme.bind(this);
     this.state = {
       isReady: false,
-      isThemeInvalid: false
+      themes: {}
     };
-  }
 
-  componentDidMount() {
     this.props.channel.on(EVENT_ID_INIT, this.onInitChannel);
   }
-
 
   componentWillUpdate(nextProps, nextState) {
     this.props.api.setQueryParams({
@@ -34,35 +31,22 @@ class PanelContainer extends React.Component {
     this.props.channel.removeListener(EVENT_ID_INIT, this.onInitChannel);
   }
 
-  onInitChannel(data) {
+  onInitChannel({ themes, currentTheme }) {
     const queryTheme = this.props.api.getQueryParam('currentTheme');
-    let currentTheme;
-
-    if (queryTheme && data.themes.filter(({ name }) => name === queryTheme).length === 1) {
-      currentTheme = queryTheme;
-    } else {
-      currentTheme = data.currentTheme;
-    }
 
     this.setState({
-      ...data,
-      currentTheme,
+      themes,
+      currentTheme: queryTheme && typeof themes[queryTheme] === 'object' ? queryTheme : currentTheme,
       isReady: true
     });
   }
 
-  onChangeTheme(theme) {
-    const currentTheme = this.state.themes.filter(({ name }) => name === theme)[0].name;
-
+  onChangeTheme(currentTheme) {
     this.setState({ currentTheme });
   }
 
   render() {
-    const { isReady, isThemeInvalid } = this.state;
-
-    if (isReady && isThemeInvalid) {
-      return null;
-    }
+    const { isReady } = this.state;
 
     return isReady ?
       <ThemePanel

@@ -3,21 +3,16 @@ import addons from '@storybook/addons';
 import ReactCSSThemr from './containers/react-css-themr';
 
 function validateThemes(themes) {
-  const isThemeValid = theme => typeof theme.name === 'string' && typeof theme.styles === 'object';
   let isValid = false;
 
-  if (
-    themes &&
-    themes.length &&
-    themes.filter(isThemeValid)
-  ) {
+  if (Object.keys(themes).filter(key => typeof themes[key] === 'object').length) {
     isValid = true;
   }
 
   return isValid;
 }
 
-function reactCSSThemrAddon(themes = []) {
+function reactCSSThemrAddon(themes = {}) {
   const channel = addons.getChannel();
   const isThemeInvalid = !validateThemes(themes);
 

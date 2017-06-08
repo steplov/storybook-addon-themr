@@ -31,16 +31,23 @@ const ComponentsExample = () => (
     </div>
   </div>
 );
+const ComponentsExample2 = () => (
+  <div>
+    <Button href="http://github.com/javivelasco" target="_blank" raised>
+      <GithubIcon /> Github
+    </Button>
+    <Button label="Bookmark" accent />
+    <Button label="Bookmark" raised primary />
+  </div>
+);
 
-const themes = [
-  {
-    name: 'Deep orange',
-    styles: deepOrange
-  },
-  {
-    name: 'Blue grey',
-    styles: blueGrey
-  }
-];
+const themes = {
+  'Deep orange': deepOrange,
+  'Blue grey': blueGrey
+};
 
-export { ComponentsExample, themes };
+export {
+  ComponentsExample,
+  ComponentsExample2,
+  themes
+};

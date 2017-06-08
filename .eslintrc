@@ -4,6 +4,10 @@
   "ecmaFeatures": {
     "classes": true
   },
+  "env": {
+    "node": true,
+    "jest": true
+  },
   "rules": {
     "comma-dangle": ["error", "never"],
     "react/jsx-filename-extension": ["off"]
