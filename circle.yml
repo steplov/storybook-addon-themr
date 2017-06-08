@@ -2,7 +2,7 @@ machine:
   node:
     version: 6.10.3
 dependencies:
-  pre:
+  post:
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
 test:
   pre:
@@ -10,7 +10,7 @@ test:
 deployment:
   npm:
     tag: /v[0-9]+(\.[0-9]+)*/
-      commands:
-        - npm run build-storybook
-        - ./scripts/deploy-ghpages.sh
-        - npm publish
+    commands:
+      - npm run build-storybook
+      - ./scripts/deploy-ghpages.sh
+      - npm publish
