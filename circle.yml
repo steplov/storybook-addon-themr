@@ -10,7 +10,7 @@ test:
 deployment:
   npm:
     tag: /v[0-9]+(\.[0-9]+)*/
-    commands:
-      - npm run build-storybook
-      - ./scripts/deploy-ghpages.sh
-      - npm publish
+      commands:
+        - npm run build-storybook
+        - ./scripts/deploy-ghpages.sh
+        - npm publish
