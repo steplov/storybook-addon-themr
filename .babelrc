@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "react"
+  ],
+  "env": {
+    "commonjs": {
+      "presets": [
+        "es2015",
+        "stage-0"
+      ]
+    },
+    "es": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "syntax-dynamic-import"
+      ]
+    },
+    "test": {
+      "presets": [
+        "es2015",
+        "stage-0"
+      ]
+    }
+  }
+}

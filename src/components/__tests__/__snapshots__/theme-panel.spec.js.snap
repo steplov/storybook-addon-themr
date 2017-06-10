@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemePanel /> should render empty without props 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    style={
+        Object {
+            "alignContent": "stretch",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "fontFamily": "
+              -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+              \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+            ",
+            "justifyContent": "center",
+            "padding": 16,
+          }
+    }
+>
+    <div
+        style={
+            Object {
+                "marginRight": 16,
+                "minWidth": 160,
+              }
+        }
+    >
+        <select
+            onChange={[Function]}
+            style={
+                Object {
+                    "alignItems": "center",
+                    "backgroundColor": "white",
+                    "border": "1px solid transparent",
+                    "borderColor": "#dbdbdb",
+                    "borderRadius": "3px",
+                    "boxShadow": "none",
+                    "color": "#363636",
+                    "cursor": "pointer",
+                    "display": "inline-flex",
+                    "fontSize": "0.875em",
+                    "height": "2.25em",
+                    "justifyContent": "flex-start",
+                    "lineHeight": "1.5",
+                    "maxWidth": "100%",
+                    "outline": "none",
+                    "paddingBottom": "calc(0.375em - 1px)",
+                    "paddingLeft": "calc(0.625em - 1px)",
+                    "paddingRight": "calc(0.625em - 1px)",
+                    "paddingTop": "calc(0.375em - 1px)",
+                    "position": "relative",
+                    "verticalAlign": "top",
+                    "width": "100%",
+                  }
+            }
+            value=""
+        >
+            
+        </select>
+    </div>
+    <div
+        style={
+            Object {
+                "fontSize": "0.875em",
+                "maxHeight": "80%",
+                "overflow": "scroll",
+              }
+        }
+    />
+</div>,
+  "nodes": Array [
+    <div
+      style={
+            Object {
+                  "alignContent": "stretch",
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "flexWrap": "nowrap",
+                  "fontFamily": "
+                  -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                  \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                ",
+                  "justifyContent": "center",
+                  "padding": 16,
+                }
+      }
+>
+      <div
+            style={
+                  Object {
+                        "marginRight": 16,
+                        "minWidth": 160,
+                      }
+            }
+      >
+            <select
+                  onChange={[Function]}
+                  style={
+                        Object {
+                              "alignItems": "center",
+                              "backgroundColor": "white",
+                              "border": "1px solid transparent",
+                              "borderColor": "#dbdbdb",
+                              "borderRadius": "3px",
+                              "boxShadow": "none",
+                              "color": "#363636",
+                              "cursor": "pointer",
+                              "display": "inline-flex",
+                              "fontSize": "0.875em",
+                              "height": "2.25em",
+                              "justifyContent": "flex-start",
+                              "lineHeight": "1.5",
+                              "maxWidth": "100%",
+                              "outline": "none",
+                              "paddingBottom": "calc(0.375em - 1px)",
+                              "paddingLeft": "calc(0.625em - 1px)",
+                              "paddingRight": "calc(0.625em - 1px)",
+                              "paddingTop": "calc(0.375em - 1px)",
+                              "position": "relative",
+                              "verticalAlign": "top",
+                              "width": "100%",
+                            }
+                  }
+                  value=""
+            >
+                  
+            </select>
+      </div>
+      <div
+            style={
+                  Object {
+                        "fontSize": "0.875em",
+                        "maxHeight": "80%",
+                        "overflow": "scroll",
+                      }
+            }
+      />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <ThemePanel
+        currentTheme=""
+        onThemeChange={[Function]}
+        themes={Object {}}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": ThemePanel {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleChange": [Function],
+        "props": Object {
+          "currentTheme": "",
+          "onThemeChange": [Function],
+          "themes": Object {},
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          style={
+                    Object {
+                              "alignContent": "stretch",
+                              "alignItems": "center",
+                              "display": "flex",
+                              "flexDirection": "row",
+                              "flexWrap": "nowrap",
+                              "fontFamily": "
+                          -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                          \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                        ",
+                              "justifyContent": "center",
+                              "padding": 16,
+                            }
+          }
+>
+          <div
+                    style={
+                              Object {
+                                        "marginRight": 16,
+                                        "minWidth": 160,
+                                      }
+                    }
+          >
+                    <select
+                              onChange={[Function]}
+                              style={
+                                        Object {
+                                                  "alignItems": "center",
+                                                  "backgroundColor": "white",
+                                                  "border": "1px solid transparent",
+                                                  "borderColor": "#dbdbdb",
+                                                  "borderRadius": "3px",
+                                                  "boxShadow": "none",
+                                                  "color": "#363636",
+                                                  "cursor": "pointer",
+                                                  "display": "inline-flex",
+                                                  "fontSize": "0.875em",
+                                                  "height": "2.25em",
+                                                  "justifyContent": "flex-start",
+                                                  "lineHeight": "1.5",
+                                                  "maxWidth": "100%",
+                                                  "outline": "none",
+                                                  "paddingBottom": "calc(0.375em - 1px)",
+                                                  "paddingLeft": "calc(0.625em - 1px)",
+                                                  "paddingRight": "calc(0.625em - 1px)",
+                                                  "paddingTop": "calc(0.375em - 1px)",
+                                                  "position": "relative",
+                                                  "verticalAlign": "top",
+                                                  "width": "100%",
+                                                }
+                              }
+                              value=""
+                    >
+                              
+                    </select>
+          </div>
+          <div
+                    style={
+                              Object {
+                                        "fontSize": "0.875em",
+                                        "maxHeight": "80%",
+                                        "overflow": "scroll",
+                                      }
+                    }
+          />
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          style={
+                    Object {
+                              "alignContent": "stretch",
+                              "alignItems": "center",
+                              "display": "flex",
+                              "flexDirection": "row",
+                              "flexWrap": "nowrap",
+                              "fontFamily": "
+                          -apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", \\"Roboto\\",
+                          \\"Segoe UI\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", sans-serif
+                        ",
+                              "justifyContent": "center",
+                              "padding": 16,
+                            }
+          }
+>
+          <div
+                    style={
+                              Object {
+                                        "marginRight": 16,
+                                        "minWidth": 160,
+                                      }
+                    }
+          >
+                    <select
+                              onChange={[Function]}
+                              style={
+                                        Object {
+                                                  "alignItems": "center",
+                                                  "backgroundColor": "white",
+                                                  "border": "1px solid transparent",
+                                                  "borderColor": "#dbdbdb",
+                                                  "borderRadius": "3px",
+                                                  "boxShadow": "none",
+                                                  "color": "#363636",
+                                                  "cursor": "pointer",
+                                                  "display": "inline-flex",
+                                                  "fontSize": "0.875em",
+                                                  "height": "2.25em",
+                                                  "justifyContent": "flex-start",
+                                                  "lineHeight": "1.5",
+                                                  "maxWidth": "100%",
+                                                  "outline": "none",
+                                                  "paddingBottom": "calc(0.375em - 1px)",
+                                                  "paddingLeft": "calc(0.625em - 1px)",
+                                                  "paddingRight": "calc(0.625em - 1px)",
+                                                  "paddingTop": "calc(0.375em - 1px)",
+                                                  "position": "relative",
+                                                  "verticalAlign": "top",
+                                                  "width": "100%",
+                                                }
+                              }
+                              value=""
+                    >
+                              
+                    </select>
+          </div>
+          <div
+                    style={
+                              Object {
+                                        "fontSize": "0.875em",
+                                        "maxHeight": "80%",
+                                        "overflow": "scroll",
+                                      }
+                    }
+          />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ThemePanel
+    currentTheme=""
+    onThemeChange={[Function]}
+    themes={Object {}}
+/>,
+}
+`;
