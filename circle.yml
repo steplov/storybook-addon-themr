@@ -23,5 +23,5 @@ deployment:
     owner: steplov
     commands:
       - npm run build-storybook
-      - ./scripts/deploy-ghpages.sh
+      - ./.scripts/deploy-ghpages.sh
       - npm publish
