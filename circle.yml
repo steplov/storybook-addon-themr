@@ -1,14 +1,24 @@
+general:
+  artifacts:
+    - "test-reports"
+  branches:
+    ignore:
+      - gh-pages
+
 machine:
   node:
     version: 6.10.3
+
 dependencies:
   post:
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
 test:
   pre:
     - npm run eslint
+
 deployment:
-  npm:
+  release:
     tag: /v[0-9]+(\.[0-9]+)*/
     owner: steplov
     commands:
