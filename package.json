@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-themr",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1",
   "description": "Storybook Addon for React CSS Themr Library",
   "main": "lib/index.js",
   "modules": "es/index.js",
