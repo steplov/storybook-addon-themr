@@ -7,13 +7,10 @@ dependencies:
 test:
   pre:
     - npm run eslint
-general:
-  branches:
-    ignore:
-      - /^(?!master).*$/
 deployment:
   npm:
     tag: /v[0-9]+(\.[0-9]+)*/
+    owner: steplov
     commands:
       - npm run build-storybook
       - ./scripts/deploy-ghpages.sh
